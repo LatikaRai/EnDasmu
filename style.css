@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+    color: white;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#nav{
+    padding: 40px 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 8;
+}
+#nav2{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#nav2 h3 a{
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+#nav2 h3:hover a{
+    background: -webkit-linear-gradient(60deg, yellow, greenyellow);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#nav2 h4{
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid white;
+    position: relative;
+    overflow: hidden;
+}
+#nav2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, yellow, greenyellow);
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+#nav2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav2 h4 a{
+    color: white;
+    text-decoration: none;
+    z-index: 99;
+    position: relative;
+}
+#nav2 h4:hover a{
+    color: black;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+#center{
+    width: 100%;
+    padding: 40px 65px;
+    display: flex;
+}
+#left{
+    /* background-color: red; */
+    width: 40%;
+}
+#left h1{
+    font-size: 4.5vw;
+    font-weight: 530;
+}
+#left p{
+    margin-top: 25px;
+    width: 90%;
+}
+.left-bot{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 50px;
+    
+    margin-top: 50px;
+}
+.left-bot h4 a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: linear-gradient(to right, yellow, greenyellow);
+    color: black;
+}
+.left-bot h5{
+    font-size: 13px;
+    font-weight: 500;
+}
+#shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 18vh;
+    /* background-color: aqua; */
+}
+#shape img{
+    height: 40vw;;
+}
+#shape1{
+    width: 35vw;
+    height: 30vw;
+    position: absolute;
+    background: linear-gradient(rgb(158, 179, 2), yellow);
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 90%;
+    border-top-right-radius: 85%;
+    border-bottom-right-radius: 50%;
+    filter: blur(15px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#shape2{
+    width: 23vw;
+    height: 25vw;
+    position: absolute;
+    background: linear-gradient(rgb(183, 205, 16),yellow);
+    top: 40%;
+    left: 15%;
+    border-radius: 50%;
+    border-top-right-radius: 90%;
+    border-bottom-left-radius: 104%;
+    filter: blur(15px);
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#shape3{
+    width: 5vw;
+    height: 6vw;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(to bottom,yellow,rgb(141, 158, 11));
+    bottom: 0;
+    left: 0;
+    filter: blur(3px);
+    animation-name: anime3;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#shape4{
+    width: 4vw;
+    height: 6vw;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,yellow,rgb(141, 158, 11));
+    position: absolute;
+    filter: blur(5px);
+    right: 15%;
+    bottom: 25%;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 80%;
+    animation-name: anime4;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#shape5{
+    width: 4vw;
+    height: 2vw;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(to top,yellow,rgb(141, 158, 11));
+    top: -5%;
+    left: -10%;
+    filter: blur(5px);
+    animation-name: anime5;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(-10%, 1%);
+    }
+    to{
+        transform: translate(10%, -5%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(-4%,3%);
+    }
+    to{
+        transform: translate(5%,-5%);
+    }
+}
+@keyframes anime3 {
+    from{
+        transform: translate(20%,-2%);
+    }
+    to{
+        transform: translate(-14%,10%);
+    }
+}
+@keyframes anime4 {
+    from{
+        transform: translate(15%,-12%);
+    }
+    to{
+        transform: translate(-14%,30%);
+    }
+}
+@keyframes anime5 {
+    from{
+        transform: translate(-15%,50%);
+    }
+    to{
+        transform: translate(24%,-10%);
+    }
+}
+#shape img{
+    position: absolute;
+    width: 30vw;
+    top: -12%;
+    left: 9%;
+    bottom: 0;
+}
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 65px;
+    background-color: black;
+}
+#bar{
+    position: absolute;
+    top: -5%;
+    width: 90%;
+    height: 15vw;
+    background-color: rgba(10, 10, 10, 0.908);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* opacity: 0.5; */
+}
+#bar #left{
+    width: 40%;
+    /* background-color: aqua; */
+}
+#left #heading{
+    color: white;
+    width: 100%;
+    padding: 1vw 5vw;
+    /* margin-bottom: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+}
+#bar #left h4{
+    font-weight: 300;
+}
+#left-bot{
+    width: 100%;
+    /* background-color: brown; */
+    padding: 1vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+}
+#bar #right{
+    width: 40%;   
+}
+#bar #right #pics{
+    display: flex;
+    align-items: center;
+}
+#bar #right img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+#right #text{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    margin-bottom: 15px;
+}
+#right #text h4{
+    font-weight: 400;
+}
+#page2 #bottom{
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    /* background-color: beige; */
+    bottom: 0;
+    /* margin-top: 50px; */
+}
+#bottom #left1{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    padding-left: 3vw;
+    /* background-color: rgb(143, 100, 36); */
+}
+#left1 #rec1{
+    position: absolute;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 40px;
+    background: linear-gradient(to right,rgb(29, 37, 0),rgb(79, 97, 1));
+}
+#left1 #rec2{
+    position: absolute;
+    width: 15vw;
+    height: 10vw;
+    right: 5%;
+    border-radius: 40px;
+    background: linear-gradient(to right,rgb(16, 47, 29),rgb(34, 102, 64));
+}
+#left1 #rec3{
+    position: absolute;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 40px;
+    bottom: 5%;
+    background: linear-gradient(to top right,#756565,#844345);
+}
+#left1 #rec4{
+    position: absolute;
+    width: 15vw;
+    height: 10vw;
+    border-radius: 40px;
+    bottom: 5%;
+    right: 5%;
+    background: linear-gradient(to top left,#855d49,#2f221c);
+}
+#rec1 img{
+    position: absolute;
+    height: 9.5vw;
+    bottom: 0;
+    right: -10%;
+}
+#rec2 img{
+    position: absolute;
+    height: 10vw;
+    bottom: 0;
+    left: 20%;
+}
+#rec3 img{
+    position: absolute;
+    height: 9.5vw;
+    bottom: 0;
+    left: 25%;
+}
+#rec4 img{
+    position: absolute;
+    height: 10vw;
+    bottom: 0;
+    right: 30%;
+}
+#bottom #right1{
+    position: absolute;
+    width: 35%;
+    right: 10%;
+}
+#right1 h6{
+    font-weight: 400;
+    margin-bottom: 2vw;
+    font-size: 15px;
+}
+#right1 h1{
+    font-size: 3vw;
+    font-weight: 500;
+}
+#right1 p{
+    font-weight: 400;
+    margin-top: 2vw;
+    line-height: 1.7;
+}
+#right1 h5{
+    margin-top: 2vw;
+    font-size: 16px;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 35px 70px;
+    background-color: black;
+    
+}
+#page3 #left2{
+    width: 25%;
+    height: 35%;
+    position: absolute;
+    bottom: 40%;
+    margin-left: 3vw;
+}
+#left2 h5{
+    font-weight: 400;
+    margin-bottom: 1.7vw;
+}
+#left2 h1{
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+#left2 p{
+    margin-top: 1.5vw;
+    line-height: 1.5;
+}
+#page3 #right2{
+    position: absolute;
+    width: 50%;
+    height: 35%;
+    bottom: 40%;
+    margin-right: 100px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#right2 #box1{
+    height: 100%;
+    width: 49%;
+    background-color: #111111c7;
+    border-radius: 40px;
+}
+#right2 .circle img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -22px;
+    margin-left: 39%;
+}
+#right2 h1{
+    text-align: center;
+    margin-top: 0.3vw;
+    margin-bottom: 0.4vw;
+}
+#right2 i{
+    color: red;
+}
+#right2 #box1 h3{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0.1vw;
+}
+#right2 #box1 h6{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.2vw;
+}
+#box1 #pic{
+    width: 100%;
+    height: 7vw;
+    background-color: blue;
+    border-radius: 40px;
+    z-index: 99;
+}
+#box1 #pic img{
+    width: 100%;
+    height: 7vw;
+    object-fit: cover;
+    border-radius: 40px;
+}
+#right2 #box2{
+    height: 100%;
+    width: 49%;
+    background-color: #111111c7;
+    border-radius: 40px;
+}
+#right2 .circle2 img{
+    height: 5vw;
+    width: 5vw;
+    background-color: rgb(140, 146, 155);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -22px;
+    margin-left: 39%;
+}
+#right2 #box2 h3{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0.1vw;
+}
+#right2 #box2 h6{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.2vw;
+}
+#box2 #pic2 img{
+    width: 100%;
+    height: 7vw;
+    object-fit: cover;
+    border-radius: 40px;
+}
+#bot-nav{
+    position: absolute;
+    width: 100%;
+    height: 10vw;
+    bottom: 0;
+    left: 0;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#bot-nav .icons{
+    height: 4vw;
+    width: 4vw;
+    background-color: white;
+    color: black;
+}
+#bot-nav h3 span{
+    font-size: 1.5vw;
+    font-weight: 800;
+}
+#bot-nav .bot-logos{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bot-logos h3{
+    text-align: center;
+}
+#page4{
+    min-height: 100vh;
+    background-color: black;
+    padding: 35px 65px;
+    position: relative;
+}
+#subscribe{
+    margin-top: 3vw;
+    font-size: 2vw;
+}
+#subscribe h1{
+    font-weight: 500;   
+}
+#subscribe a{
+    position: absolute;
+    text-decoration: none;
+    margin-top: 2vw;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgb(255, 230, 0), greenyellow);
+    color: black;
+}
+#page4 #end{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    padding: 19px 65px;
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#end .end-left{
+    width: 30%;
+    height: 90%;
+    line-height: 1.9;
+}
+.end-left p{
+    margin-bottom: 35px;
+    color: rgb(116, 116, 116);
+}
+.end-left h3{
+    color: rgb(116, 116, 116);
+}
+.end-left h5{
+    position: absolute;
+    bottom: 10%;
+    font-weight: 550;
+    color: rgb(116, 116, 116);
+}
+#end .end-right{
+    width: 65%;
+    height: 90%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    line-height: 1.8;
+    color: rgb(116, 116, 116);
+}
+.end-texts h3{
+    line-height: 3;
+    color: rgb(116, 116, 116);
+}
+.end-texts h4{
+    font-weight: 550;
+    color: rgb(116, 116, 116);
+}
+.icons2 i{
+    margin-right: 15px;
+    color: rgb(116, 116, 116);
+}
